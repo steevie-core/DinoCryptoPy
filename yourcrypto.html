@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cryptocurrency Performance</title>
+    <style>
+        @font-face {
+            font-family: 'nulshock';
+            src: url('/font/nulshock bd.otf') format('otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'nulshock', sans-serif;
+            background: linear-gradient(135deg, #002efd, #8000ff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .crypto-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .crypto-table th, .crypto-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+
+        .crypto-table th {
+            background: rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+
+        .crypto-table tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .crypto-table tr:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .performance {
+            font-weight: 500;
+        }
+
+        .positive {
+            color: #00ff08;
+        }
+
+        .negative {
+            color: #cc0e00;
+        }
+
+        .terminal {
+            background: black;
+            color: green;
+            font-family: monospace;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="terminal.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cryptocurrencies</h1>
+        <table class="crypto-table">
+            <thead>
+                <tr>
+                    <th>Cryptocurrency</th>
+                    <th>Current Price</th>
+                    <th>24h Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="Favre" onclick="openTerminal('Favre')">
+                    <td>Favre</td>
+                    <td>$2350</td>
+                    <td class="performance positive">+5.25%</td>
+                </tr>
+                <tr id="Torihiki" onclick="openTerminal('Torihiki')">
+                    <td>Torihiki</td>
+                    <td>$2345</td>
+                    <td class="performance negative">-2.14%</td>
+                </tr>
+                <tr id="Shiron" onclick="openTerminal('Shiron')">
+                    <td>Shiron</td>
+                    <td>$1845</td>
+                    <td class="performance positive">+1.78%</td>
+                </tr>
+                <tr id="Bakine" onclick="openTerminal('Bakine')">
+                    <td>Bakine</td>
+                    <td>$65</td>
+                    <td class="performance negative">-1.36%</td>
+                </tr>
+                <tr id="Rotan" onclick="openTerminal('Rotan')">
+                    <td>Rotan</td>
+                    <td>$1050</td>
+                    <td class="performance positive">+3.12%</td>
+                </tr>
+                <tr id="Bitcoin" onclick="openTerminal('Bitcoin')">
+                    <td>Bitcoin</td>
+                    <td>$541420</td>
+                    <td class="performance positive">+5.25%</td>
+                </tr>
+                <tr id="Ordov" onclick="openTerminal('Ordov')">
+                    <td>Ordov</td>
+                    <td>$120</td>
+                    <td class="performance negative">-0.85%</td>
+                </tr>
+                <tr id="Royla" onclick="openTerminal('Royla')">
+                    <td>Royla</td>
+                    <td>$5420</td>
+                    <td class="performance negative">-0.85%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
